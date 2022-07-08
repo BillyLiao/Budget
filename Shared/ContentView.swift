@@ -14,8 +14,16 @@ struct ContentView: View {
     }
 }
 
+struct ContentView2: View {
+    var body: some View {
+        Text("Hello, SwiftUI!")
+            .padding()
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        ContentView2()
     }
 }

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		604A90AC28782051002970B3 /* BudgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604A90AB28782051002970B3 /* BudgetManager.swift */; };
+		604A90AD28782051002970B3 /* BudgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604A90AB28782051002970B3 /* BudgetManager.swift */; };
+		604A90B22878209A002970B3 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604A90B12878209A002970B3 /* Budget.swift */; };
+		604A90B32878209A002970B3 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604A90B12878209A002970B3 /* Budget.swift */; };
+		604A90B528782112002970B3 /* BudgetCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604A90B428782112002970B3 /* BudgetCategory.swift */; };
+		604A90B628782112002970B3 /* BudgetCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604A90B428782112002970B3 /* BudgetCategory.swift */; };
+		604A90B828782536002970B3 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604A90B728782536002970B3 /* Expense.swift */; };
+		604A90B928782536002970B3 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604A90B728782536002970B3 /* Expense.swift */; };
 		60A4C7A92875D56F00E61853 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A4C7A82875D56F00E61853 /* Tests_iOS.swift */; };
 		60A4C7AB2875D56F00E61853 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A4C7AA2875D56F00E61853 /* Tests_iOSLaunchTests.swift */; };
 		60A4C7B52875D56F00E61853 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A4C7B42875D56F00E61853 /* Tests_macOS.swift */; };
@@ -37,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		604A90AB28782051002970B3 /* BudgetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetManager.swift; sourceTree = "<group>"; };
+		604A90B12878209A002970B3 /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		604A90B428782112002970B3 /* BudgetCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCategory.swift; sourceTree = "<group>"; };
+		604A90B728782536002970B3 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		60A4C7902875D56E00E61853 /* BudgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetApp.swift; sourceTree = "<group>"; };
 		60A4C7912875D56E00E61853 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		60A4C7922875D56F00E61853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +111,10 @@
 			children = (
 				60A4C7902875D56E00E61853 /* BudgetApp.swift */,
 				60A4C7912875D56E00E61853 /* ContentView.swift */,
+				604A90AB28782051002970B3 /* BudgetManager.swift */,
+				604A90B12878209A002970B3 /* Budget.swift */,
+				604A90B728782536002970B3 /* Expense.swift */,
+				604A90B428782112002970B3 /* BudgetCategory.swift */,
 				60A4C7922875D56F00E61853 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -299,8 +315,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604A90B828782536002970B3 /* Expense.swift in Sources */,
+				604A90B528782112002970B3 /* BudgetCategory.swift in Sources */,
 				60A4C7BA2875D56F00E61853 /* ContentView.swift in Sources */,
 				60A4C7B82875D56F00E61853 /* BudgetApp.swift in Sources */,
+				604A90B22878209A002970B3 /* Budget.swift in Sources */,
+				604A90AC28782051002970B3 /* BudgetManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,8 +328,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604A90B928782536002970B3 /* Expense.swift in Sources */,
+				604A90B628782112002970B3 /* BudgetCategory.swift in Sources */,
 				60A4C7BB2875D56F00E61853 /* ContentView.swift in Sources */,
 				60A4C7B92875D56F00E61853 /* BudgetApp.swift in Sources */,
+				604A90B32878209A002970B3 /* Budget.swift in Sources */,
+				604A90AD28782051002970B3 /* BudgetManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
