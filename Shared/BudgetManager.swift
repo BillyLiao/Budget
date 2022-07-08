@@ -8,26 +8,32 @@
 import Foundation
 
 protocol BudgetManagerProtocal {
-    var budgets: [Budget] { get set }
-    
-    func addNewExpense(_ expense: Int, to category: BudgetCategory)
+    func add(_ budget: Budget)
+    func addNewExpense(_ expense: Int, to category: BudgetCategory) -> Expense?
     func removeExpense(_ expenseID: String, from category: BudgetCategory)
 }
 
 class BudgetManager: BudgetManagerProtocal {
-    var budgets: [Budget] = []
+    public private(set) var budgets: [Budget] = []
     
-    func addNewExpense(_ expense: Int, to category: BudgetCategory) {
-        guard var budget = get(category) else { return }
-        budget.expenses.append(.init(value: expense))
+    func add(_ budget: Budget) {
+        guard budgets.filter{ $0.category == budget.category }.first == nil else { return }
+        budgets.append(budget)
+    }
+    
+    @discardableResult func addNewExpense(_ expense: Int, to category: BudgetCategory) -> Expense? {
+        guard let index = budgets.firstIndex(where: { $0.category == category }) else { return nil }
+        let expense = Expense(expense)
+        budgets[index].expenses.append(expense)
+        return expense
     }
     
     func removeExpense(_ expenseID: String, from category: BudgetCategory) {
-        guard var budget = get(category) else { return }
-        budget.expenses.removeAll(where: { $0.id == expenseID })
+        guard let index = budgets.firstIndex(where: { $0.category == category }) else { return }
+        budgets[index].expenses.removeAll(where: { $0.id == expenseID })
     }
     
     private func get(_ category: BudgetCategory) -> Budget? {
-        return budgets.filter{ $0.category == category}.first
+        budgets.filter{ $0.category == category }.first
     }
 }

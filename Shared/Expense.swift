@@ -10,5 +10,9 @@ import Foundation
 struct Expense {
     var id: String = UUID().uuidString
     var value: Int
+    
+    init(_ value: Int) {
+        self.value = value
+    }
 }
 
